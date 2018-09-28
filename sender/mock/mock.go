@@ -6,8 +6,8 @@ import (
 	"github.com/json-iterator/go"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/sender"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/sender"
+	. "github.com/PUGE/logkit/utils/models"
 	"github.com/qiniu/pandora-go-sdk/base/reqerr"
 )
 

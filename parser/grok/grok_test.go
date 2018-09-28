@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/puge/logkit/utils"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/utils"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 var (

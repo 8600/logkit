@@ -1,7 +1,7 @@
 ################################  以下可以删除  ############################
 
 
-GitHub 的 Issue 主要目的是为了报告 Bug 以及提新功能需求，若您对使用有疑问，请先阅读 [logkit Wiki 文档](https://github.com/puge/logkit/wiki) 寻找答案。
+GitHub 的 Issue 主要目的是为了报告 Bug 以及提新功能需求，若您对使用有疑问，请先阅读 [logkit Wiki 文档](https://github.com/PUGE/logkit/wiki) 寻找答案。
 
 开启 Issue 前请尝试搜索是否有类似疑问（Issues），如果没有找到类似的，请在模板相应区块（【Bug Report】，【Feature Request】，【Document Improvement】）根据实际情况填写。
 

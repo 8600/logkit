@@ -18,7 +18,7 @@ import (
 	"github.com/qiniu/log"
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 type mock_pandora struct {

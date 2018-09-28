@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/reader"
-	. "github.com/puge/logkit/reader/test"
+	"github.com/PUGE/logkit/reader"
+	. "github.com/PUGE/logkit/reader/test"
 )
 
 func Test_scriptFile(t *testing.T) {

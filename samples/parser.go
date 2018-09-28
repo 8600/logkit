@@ -4,8 +4,8 @@ import (
 	"strings"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 // 一个自定义parser的示例，将日志放到data中的log字段中

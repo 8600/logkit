@@ -3,7 +3,7 @@ package reader
 import (
 	"strings"
 
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 // Constants for cloudtrail

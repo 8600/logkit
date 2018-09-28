@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/reader"
-	. "github.com/puge/logkit/reader/test"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/reader"
+	. "github.com/PUGE/logkit/reader/test"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func TestElasticReader(t *testing.T) {

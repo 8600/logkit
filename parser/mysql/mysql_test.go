@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 var content = `# Time: 2017-12-24T02:42:00.126000Z

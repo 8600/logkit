@@ -15,7 +15,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func tmpDiskQueueName(prefix string) string {

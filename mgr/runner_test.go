@@ -18,23 +18,23 @@ import (
 
 	"github.com/qiniu/log"
 
-	"github.com/puge/logkit/cleaner"
+	"github.com/PUGE/logkit/cleaner"
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	"github.com/puge/logkit/parser/qiniu"
-	"github.com/puge/logkit/reader"
-	"github.com/puge/logkit/router"
-	"github.com/puge/logkit/sender"
-	_ "github.com/puge/logkit/sender/builtin"
-	"github.com/puge/logkit/sender/discard"
-	"github.com/puge/logkit/sender/mock"
-	"github.com/puge/logkit/sender/pandora"
-	"github.com/puge/logkit/transforms"
-	_ "github.com/puge/logkit/transforms/builtin"
-	"github.com/puge/logkit/transforms/ip"
-	"github.com/puge/logkit/transforms/mutate"
-	"github.com/puge/logkit/utils/equeue"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	"github.com/PUGE/logkit/parser/qiniu"
+	"github.com/PUGE/logkit/reader"
+	"github.com/PUGE/logkit/router"
+	"github.com/PUGE/logkit/sender"
+	_ "github.com/PUGE/logkit/sender/builtin"
+	"github.com/PUGE/logkit/sender/discard"
+	"github.com/PUGE/logkit/sender/mock"
+	"github.com/PUGE/logkit/sender/pandora"
+	"github.com/PUGE/logkit/transforms"
+	_ "github.com/PUGE/logkit/transforms/builtin"
+	"github.com/PUGE/logkit/transforms/ip"
+	"github.com/PUGE/logkit/transforms/mutate"
+	"github.com/PUGE/logkit/utils/equeue"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func cleanMetaFolder(path string) {
@@ -596,16 +596,16 @@ func Test_QiniulogRun(t *testing.T) {
 		[WARN][SLdoIrCDZj7pmZsU] disk.go <job.freezeDeamon> pop() failed: not found
 2017/01/22 11:15:54.947217 [2pyKMukqvwSd-ZsU][INFO] disk.go:124: Service: POST 10.200.20.25:9100/user/info, Code: 200, Xlog: AC, Time: 1ms
 `
-	log2 := `2016/10/20 17:20:30.642666 [ERROR] disk.go:125: github.com/puge/logkit/queue/disk.go:241
+	log2 := `2016/10/20 17:20:30.642666 [ERROR] disk.go:125: github.com/PUGE/logkit/queue/disk.go:241
 	1234 3243xsaxs
-2016/10/20 17:20:30.642662 [123][WARN] disk.go:241: github.com/puge/logkit/queue/disk.go 1
+2016/10/20 17:20:30.642662 [123][WARN] disk.go:241: github.com/PUGE/logkit/queue/disk.go 1
 `
 	log3 := `2016/10/20 17:20:30.642662 [124][WARN] disk.go:456: xxxxxx`
 	expfiles := []string{`[REQ_END] 200 0.010k 3.792ms
 		[WARN][SLdoIrCDZj7pmZsU] disk.go <job.freezeDeamon> pop() failed: not found`,
 		`Service: POST 10.200.20.25:9100/user/info, Code: 200, Xlog: AC, Time: 1ms`,
-		`github.com/puge/logkit/queue/disk.go:241
-	1234 3243xsaxs`, `github.com/puge/logkit/queue/disk.go 1`,
+		`github.com/PUGE/logkit/queue/disk.go:241
+	1234 3243xsaxs`, `github.com/PUGE/logkit/queue/disk.go 1`,
 		`xxxxxx`}
 	expreqid := []string{"X-ZsU", "2pyKMukqvwSd-ZsU", "", "123", "124"}
 	if err := ioutil.WriteFile(filepath.Join(logpath, "log1"), []byte(log1), 0666); err != nil {

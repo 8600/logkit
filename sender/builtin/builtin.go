@@ -1,13 +1,13 @@
 package builtin
 
 import (
-	_ "github.com/puge/logkit/sender/discard"
-	_ "github.com/puge/logkit/sender/elasticsearch"
-	_ "github.com/puge/logkit/sender/file"
-	_ "github.com/puge/logkit/sender/http"
-	_ "github.com/puge/logkit/sender/influxdb"
-	_ "github.com/puge/logkit/sender/kafka"
-	_ "github.com/puge/logkit/sender/mock"
-	_ "github.com/puge/logkit/sender/mongodb"
-	_ "github.com/puge/logkit/sender/pandora"
+	_ "github.com/PUGE/logkit/sender/discard"
+	_ "github.com/PUGE/logkit/sender/elasticsearch"
+	_ "github.com/PUGE/logkit/sender/file"
+	_ "github.com/PUGE/logkit/sender/http"
+	_ "github.com/PUGE/logkit/sender/influxdb"
+	_ "github.com/PUGE/logkit/sender/kafka"
+	_ "github.com/PUGE/logkit/sender/mock"
+	_ "github.com/PUGE/logkit/sender/mongodb"
+	_ "github.com/PUGE/logkit/sender/pandora"
 )

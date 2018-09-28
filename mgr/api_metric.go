@@ -2,7 +2,7 @@ package mgr
 
 import (
 	"github.com/labstack/echo"
-	"github.com/puge/logkit/metric"
+	"github.com/PUGE/logkit/metric"
 )
 
 //GET /logkit/metric/keys

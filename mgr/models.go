@@ -4,9 +4,9 @@ import (
 	"time"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/router"
-	"github.com/puge/logkit/utils/equeue"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/router"
+	"github.com/PUGE/logkit/utils/equeue"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 // RunnerStatus runner运行状态，添加字段请在clone函数中相应添加

@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/json-iterator/go"
-	"github.com/puge/logkit/reader"
+	"github.com/PUGE/logkit/reader"
 	"github.com/stretchr/testify/assert"
 )
 

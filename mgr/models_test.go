@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/puge/logkit/utils/equeue"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/utils/equeue"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func TestRunnerStatusClone(t *testing.T) {

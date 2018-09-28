@@ -15,11 +15,11 @@ import (
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/sender"
-	"github.com/puge/logkit/sender/mock"
-	"github.com/puge/logkit/sender/mock_pandora"
-	"github.com/puge/logkit/sender/pandora"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/sender"
+	"github.com/PUGE/logkit/sender/mock"
+	"github.com/PUGE/logkit/sender/mock_pandora"
+	"github.com/PUGE/logkit/sender/pandora"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 const (

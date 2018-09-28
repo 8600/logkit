@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/qiniu/log"
-	"github.com/puge/logkit/transforms"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/transforms"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/json-iterator/go"
 )

@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/reader"
+	"github.com/PUGE/logkit/reader"
 )
 
 func TestRedisReaderWithString(t *testing.T) {

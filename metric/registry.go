@@ -1,7 +1,7 @@
 package metric
 
 import (
-	"github.com/puge/logkit/reader"
+	"github.com/PUGE/logkit/reader"
 )
 
 const (

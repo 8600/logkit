@@ -9,10 +9,10 @@ import (
 	"github.com/qiniu/log"
 
 	"github.com/influxdata/telegraf/plugins/inputs/memcached"
-	"github.com/puge/logkit/metric"
-	"github.com/puge/logkit/metric/telegraf"
-	"github.com/puge/logkit/reader"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/metric"
+	"github.com/PUGE/logkit/metric/telegraf"
+	"github.com/PUGE/logkit/reader"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 const MetricName = "memcached"

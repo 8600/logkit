@@ -5,8 +5,8 @@ import (
 
 	"github.com/qiniu/log"
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/sender"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/sender"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 // CustomSender 仅作为示例，什么都不做，只是把数据打印出来而已

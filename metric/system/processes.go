@@ -12,8 +12,8 @@ import (
 	"syscall"
 
 	"github.com/qiniu/log"
-	"github.com/puge/logkit/metric"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/metric"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/shirou/gopsutil/process"
 )

@@ -2,8 +2,8 @@ package mockreader
 
 import (
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/reader"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/reader"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 var (

@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/json-iterator/go"
-	"github.com/puge/logkit/metric"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/metric"
+	. "github.com/PUGE/logkit/utils/models"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -16,9 +16,9 @@ import (
 
 	"github.com/qiniu/log"
 
-	"github.com/puge/logkit/rateio"
-	"github.com/puge/logkit/utils"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/rateio"
+	"github.com/PUGE/logkit/utils"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 var _ BackendQueue = &diskQueue{}

@@ -3,9 +3,9 @@ package mgr
 import (
 	"net/http"
 
-	"github.com/puge/logkit/transforms"
-	_ "github.com/puge/logkit/transforms/date"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/transforms"
+	_ "github.com/PUGE/logkit/transforms/date"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/json-iterator/go"
 	"github.com/stretchr/testify/assert"

@@ -1,7 +1,7 @@
 package mgr
 
 import (
-	"github.com/puge/logkit/cleaner"
+	"github.com/PUGE/logkit/cleaner"
 
 	"github.com/labstack/echo"
 )

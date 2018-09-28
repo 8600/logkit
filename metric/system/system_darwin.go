@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/qiniu/log"
-	"github.com/puge/logkit/metric"
+	"github.com/PUGE/logkit/metric"
 	"github.com/shirou/gopsutil/host"
 	"github.com/shirou/gopsutil/load"
 )

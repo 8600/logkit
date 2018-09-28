@@ -17,9 +17,9 @@ import (
 
 	"github.com/qiniu/log"
 
-	"github.com/puge/logkit/parser"
-	. "github.com/puge/logkit/utils/models"
-	utilsos "github.com/puge/logkit/utils/os"
+	"github.com/PUGE/logkit/parser"
+	. "github.com/PUGE/logkit/utils/models"
+	utilsos "github.com/PUGE/logkit/utils/os"
 )
 
 var DEFAULT_PORT = 3000

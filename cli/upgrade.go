@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	. "github.com/puge/logkit/utils/models"
-	utilsos "github.com/puge/logkit/utils/os"
+	. "github.com/PUGE/logkit/utils/models"
+	utilsos "github.com/PUGE/logkit/utils/os"
 )
 
 const (

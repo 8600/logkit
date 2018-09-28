@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/PUGE/logkit/conf"
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/stretchr/testify/assert"
 )

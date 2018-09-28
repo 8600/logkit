@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/utils/equeue"
+	"github.com/PUGE/logkit/utils/equeue"
 )
 
 const (

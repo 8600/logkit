@@ -7,7 +7,7 @@ import (
 	"github.com/qiniu/log"
 
 	"github.com/PUGE/logkit/conf"
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 // Reader 代表了一个通用的行读取器

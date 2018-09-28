@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func TestKafaRestLogParser(t *testing.T) {

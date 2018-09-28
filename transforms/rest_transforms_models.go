@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 const (

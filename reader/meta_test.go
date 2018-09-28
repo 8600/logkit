@@ -13,9 +13,9 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/PUGE/logkit/conf"
-	. "github.com/puge/logkit/reader/test"
-	"github.com/puge/logkit/utils"
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/reader/test"
+	"github.com/PUGE/logkit/utils"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func createFile(interval int) {

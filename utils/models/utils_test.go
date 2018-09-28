@@ -13,7 +13,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/puge/logkit/times"
+	"github.com/PUGE/logkit/times"
 )
 
 func Test_ReadDirSortByTime(t *testing.T) {

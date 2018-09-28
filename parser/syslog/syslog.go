@@ -12,8 +12,8 @@ import (
 	"github.com/jeromer/syslogparser/rfc5424"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 const (

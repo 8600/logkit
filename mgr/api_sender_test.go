@@ -3,7 +3,7 @@ package mgr
 import (
 	"net/http"
 
-	"github.com/puge/logkit/sender"
+	"github.com/PUGE/logkit/sender"
 
 	"github.com/json-iterator/go"
 	"github.com/stretchr/testify/assert"

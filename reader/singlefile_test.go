@@ -10,9 +10,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/puge/logkit/reader/test"
-	. "github.com/puge/logkit/utils/models"
-	utilsos "github.com/puge/logkit/utils/os"
+	. "github.com/PUGE/logkit/reader/test"
+	. "github.com/PUGE/logkit/utils/models"
+	utilsos "github.com/PUGE/logkit/utils/os"
 )
 
 //测试single file rotate的情况

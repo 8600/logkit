@@ -1,7 +1,7 @@
 # logkit Rest API
 
 
-## Cluster相关API 参阅 [cluser_design](https://github.com/puge/logkit/blob/develop/mgr/cluster_design.md)
+## Cluster相关API 参阅 [cluser_design](https://github.com/PUGE/logkit/blob/develop/mgr/cluster_design.md)
 
 ## Version
 

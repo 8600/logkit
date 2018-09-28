@@ -14,12 +14,12 @@ import (
 	"github.com/qiniu/log"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/metric"
-	"github.com/puge/logkit/metric/curl"
-	"github.com/puge/logkit/reader"
-	"github.com/puge/logkit/sender"
-	"github.com/puge/logkit/transforms"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/metric"
+	"github.com/PUGE/logkit/metric/curl"
+	"github.com/PUGE/logkit/reader"
+	"github.com/PUGE/logkit/sender"
+	"github.com/PUGE/logkit/transforms"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 const (

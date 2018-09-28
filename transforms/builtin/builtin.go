@@ -1,10 +1,10 @@
 package builtin
 
 import (
-	_ "github.com/puge/logkit/transforms/aws"
-	_ "github.com/puge/logkit/transforms/date"
-	_ "github.com/puge/logkit/transforms/ip"
-	_ "github.com/puge/logkit/transforms/mutate"
-	_ "github.com/puge/logkit/transforms/service"
-	_ "github.com/puge/logkit/transforms/ua"
+	_ "github.com/PUGE/logkit/transforms/aws"
+	_ "github.com/PUGE/logkit/transforms/date"
+	_ "github.com/PUGE/logkit/transforms/ip"
+	_ "github.com/PUGE/logkit/transforms/mutate"
+	_ "github.com/PUGE/logkit/transforms/service"
+	_ "github.com/PUGE/logkit/transforms/ua"
 )

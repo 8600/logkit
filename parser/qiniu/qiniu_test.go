@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	"github.com/puge/logkit/times"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	"github.com/PUGE/logkit/times"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func Test_QiniuLogRegex(t *testing.T) {
@@ -27,7 +27,7 @@ func Test_QiniuLogRegex(t *testing.T) {
 			exp:  true,
 		},
 		{
-			line: "2018/08/17 10:49:29 [INFO][github.com/puge/logkit/reader] seqfile.go:538: Runner[UndefinedRunnerName] ",
+			line: "2018/08/17 10:49:29 [INFO][github.com/PUGE/logkit/reader] seqfile.go:538: Runner[UndefinedRunnerName] ",
 			exp:  true,
 		},
 		{
@@ -39,15 +39,15 @@ func Test_QiniuLogRegex(t *testing.T) {
 			exp: false,
 		},
 		{
-			line: "2016/10/20 18:20:30.642666 [ERROR] github.com/puge/logkit/queue/disk.go:241: DISKQUEUE(stream_local_save): readOne() error",
+			line: "2016/10/20 18:20:30.642666 [ERROR] github.com/PUGE/logkit/queue/disk.go:241: DISKQUEUE(stream_local_save): readOne() error",
 			exp:  true,
 		},
 		{
-			line: "2016/10/20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/puge/logkit/queue/disk.go:241: hello",
+			line: "2016/10/20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/PUGE/logkit/queue/disk.go:241: hello",
 			exp:  true,
 		},
 		{
-			line: "2016-10-20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/puge/logkit/queue/disk.go:241: hello",
+			line: "2016-10-20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/PUGE/logkit/queue/disk.go:241: hello",
 			exp:  false,
 		},
 		{
@@ -86,15 +86,15 @@ func Test_QiniuLogRegex(t *testing.T) {
 			exp: false,
 		},
 		{
-			line: "QINIU 2016/10/20 18:20:30.642666 [ERROR] github.com/puge/logkit/queue/disk.go:241: DISKQUEUE(stream_local_save): readOne() error",
+			line: "QINIU 2016/10/20 18:20:30.642666 [ERROR] github.com/PUGE/logkit/queue/disk.go:241: DISKQUEUE(stream_local_save): readOne() error",
 			exp:  true,
 		},
 		{
-			line: "QINIU 2016/10/20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/puge/logkit/queue/disk.go:241: hello",
+			line: "QINIU 2016/10/20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/PUGE/logkit/queue/disk.go:241: hello",
 			exp:  true,
 		},
 		{
-			line: "QINIU 2016-10-20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/puge/logkit/queue/disk.go:241: hello",
+			line: "QINIU 2016-10-20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/PUGE/logkit/queue/disk.go:241: hello",
 			exp:  false,
 		},
 		{
@@ -128,8 +128,8 @@ func Test_QiniulogParser(t *testing.T) {
 		"2017/03/28 15:41:06 [Wm0AAPg-IUMW-68U][INFO] bdc.go:573: deleted: 67608",
 		`2016/10/20 17:30:21.433423 [GE2owHck-Y4IWJHS][WARN] github.com/qiniu/http/rpcutil.v1/rpc_util.go:203:  ==> qiniu.com/streaming.v2/apiserver.go:1367: E18102: The specified repo does not exist under the provided appid ~
 		[GE2owHck-Y4IWJHS]{"error":"No 	 such \t entry","reqid":"","details":null,"code":612}`,
-		"2016/10/20 18:20:30.642666 [ERROR] github.com/puge/logkit/queue/disk.go:241: DISKQUEUE(stream_local_save): readOne() error",
-		"2016/10/20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/puge/logkit/queue/disk.go:241: hello",
+		"2016/10/20 18:20:30.642666 [ERROR] github.com/PUGE/logkit/queue/disk.go:241: DISKQUEUE(stream_local_save): readOne() error",
+		"2016/10/20 17:20:30.642666 [GE2owHck-Y4IWJHS][INFO] disk.go github.com/PUGE/logkit/queue/disk.go:241: hello",
 		"",
 	}
 	dts, err := p.Parse(lines)
@@ -163,8 +163,8 @@ func Test_QiniulogParser(t *testing.T) {
 	}
 
 	newlines := []string{
-		"2016/10/20 17:20:30.642666 [ERROR] disk.go github.com/puge/logkit/queue/disk.go:241: ",
-		"2016/10/20 17:20:30.642662 [123][WARN] disk.go github.com/puge/logkit/queue/disk.go:241: 1",
+		"2016/10/20 17:20:30.642666 [ERROR] disk.go github.com/PUGE/logkit/queue/disk.go:241: ",
+		"2016/10/20 17:20:30.642662 [123][WARN] disk.go github.com/PUGE/logkit/queue/disk.go:241: 1",
 	}
 	dts, err = p.Parse(newlines)
 	if c, ok := err.(*StatsError); ok {
@@ -182,8 +182,8 @@ func Test_QiniulogParser(t *testing.T) {
 	if dts[1]["level"] != "WARN" {
 		t.Errorf("parse level error exp WARN but %v", dts[1]["level"])
 	}
-	if dts[1]["file"] != "disk.go github.com/puge/logkit/queue/disk.go:241:" {
-		t.Errorf("parse level error exp disk.go github.com/puge/logkit/queue/disk.go:241: but %v", dts[0]["file"])
+	if dts[1]["file"] != "disk.go github.com/PUGE/logkit/queue/disk.go:241:" {
+		t.Errorf("parse level error exp disk.go github.com/PUGE/logkit/queue/disk.go:241: but %v", dts[0]["file"])
 	}
 
 	for i := range dts {

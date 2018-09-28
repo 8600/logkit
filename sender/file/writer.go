@@ -11,7 +11,7 @@ import (
 
 	"github.com/qiniu/log"
 
-	"github.com/puge/logkit/utils"
+	"github.com/PUGE/logkit/utils"
 )
 
 const defaultFileWriterPoolSize = 10

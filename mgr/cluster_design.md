@@ -62,7 +62,7 @@ logkit 的 cluster 功能配置非常简单，只需要在 logkit 的主配置�
 ```
 ### 参数说明
 
-此处仅介绍 cluster 配置的字段信息，完整的 logkit 主配置文件字段说明请参考 [logkit主配置文件](https://github.com/puge/logkit/wiki/logkit%E4%B8%BB%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
+此处仅介绍 cluster 配置的字段信息，完整的 logkit 主配置文件字段说明请参考 [logkit主配置文件](https://github.com/PUGE/logkit/wiki/logkit%E4%B8%BB%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
 
 cluster 配置参数说明如下:
 

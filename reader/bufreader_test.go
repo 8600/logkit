@@ -11,8 +11,8 @@ import (
 	"github.com/qiniu/log"
 
 	"github.com/PUGE/logkit/conf"
-	. "github.com/puge/logkit/reader/test"
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/reader/test"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 var lines = "123456789\n123456789\n123456789\n123456789\n"

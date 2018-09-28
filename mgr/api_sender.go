@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"sort"
 
-	"github.com/puge/logkit/router"
-	"github.com/puge/logkit/sender"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/router"
+	"github.com/PUGE/logkit/sender"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/labstack/echo"
 )

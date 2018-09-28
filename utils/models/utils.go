@@ -30,7 +30,7 @@ import (
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 
 	"github.com/qiniu/log"
-	"github.com/puge/logkit/times"
+	"github.com/PUGE/logkit/times"
 )
 
 type File struct {

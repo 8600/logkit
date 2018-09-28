@@ -6,8 +6,8 @@ import (
 	"github.com/Preetam/mysqllog"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func init() {

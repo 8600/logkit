@@ -6,16 +6,16 @@ import (
 	"runtime"
 
 	config "github.com/PUGE/logkit/conf"
-	_ "github.com/puge/logkit/metric/all"
-	"github.com/puge/logkit/mgr"
-	"github.com/puge/logkit/parser"
-	"github.com/puge/logkit/reader"
-	"github.com/puge/logkit/samples"
-	"github.com/puge/logkit/sender"
-	utilsos "github.com/puge/logkit/utils/os"
+	_ "github.com/PUGE/logkit/metric/all"
+	"github.com/PUGE/logkit/mgr"
+	"github.com/PUGE/logkit/parser"
+	"github.com/PUGE/logkit/reader"
+	"github.com/PUGE/logkit/samples"
+	"github.com/PUGE/logkit/sender"
+	utilsos "github.com/PUGE/logkit/utils/os"
 
 	"github.com/qiniu/log"
-	"github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/utils/models"
 )
 
 type Config struct {

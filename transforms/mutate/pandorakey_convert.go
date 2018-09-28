@@ -3,8 +3,8 @@ package mutate
 import (
 	"errors"
 
-	"github.com/puge/logkit/transforms"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/transforms"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 var (

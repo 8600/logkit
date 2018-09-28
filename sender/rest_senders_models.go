@@ -3,7 +3,7 @@ package sender
 import (
 	"strconv"
 
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 	"github.com/qiniu/pandora-go-sdk/base/config"
 )
 

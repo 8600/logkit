@@ -17,9 +17,9 @@ import (
 	"github.com/qiniu/pandora-go-sdk/base/reqerr"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/queue"
-	. "github.com/puge/logkit/utils/models"
-	"github.com/puge/logkit/utils/reqid"
+	"github.com/PUGE/logkit/queue"
+	. "github.com/PUGE/logkit/utils/models"
+	"github.com/PUGE/logkit/utils/reqid"
 )
 
 const (

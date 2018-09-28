@@ -1,7 +1,7 @@
 package router
 
 import (
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func GetRouterOption() []Option {

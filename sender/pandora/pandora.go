@@ -22,11 +22,11 @@ import (
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 
 	logkitconf "github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/metric"
-	"github.com/puge/logkit/sender"
-	"github.com/puge/logkit/times"
-	. "github.com/puge/logkit/utils/models"
-	utilsos "github.com/puge/logkit/utils/os"
+	"github.com/PUGE/logkit/metric"
+	"github.com/PUGE/logkit/sender"
+	"github.com/PUGE/logkit/times"
+	. "github.com/PUGE/logkit/utils/models"
+	utilsos "github.com/PUGE/logkit/utils/os"
 )
 
 var osInfo = []string{KeyCore, KeyHostName, KeyOsInfo, KeyLocalIp}

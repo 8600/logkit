@@ -15,11 +15,11 @@ import (
 	"time"
 
 	"github.com/qiniu/log"
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/json-iterator/go"
 	"github.com/labstack/echo"
-	utilsos "github.com/puge/logkit/utils/os"
+	utilsos "github.com/PUGE/logkit/utils/os"
 	"github.com/stretchr/testify/assert"
 )
 

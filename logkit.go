@@ -14,14 +14,14 @@ import (
 	"github.com/labstack/echo"
 	"github.com/qiniu/log"
 
-	"github.com/puge/logkit/cli"
+	"github.com/PUGE/logkit/cli"
 	config "github.com/PUGE/logkit/conf"
-	_ "github.com/puge/logkit/metric/all"
-	"github.com/puge/logkit/mgr"
-	"github.com/puge/logkit/times"
-	_ "github.com/puge/logkit/transforms/builtin"
-	. "github.com/puge/logkit/utils/models"
-	utilsos "github.com/puge/logkit/utils/os"
+	_ "github.com/PUGE/logkit/metric/all"
+	"github.com/PUGE/logkit/mgr"
+	"github.com/PUGE/logkit/times"
+	_ "github.com/PUGE/logkit/transforms/builtin"
+	. "github.com/PUGE/logkit/utils/models"
+	utilsos "github.com/PUGE/logkit/utils/os"
 )
 
 //Config of logkit

@@ -3,8 +3,8 @@ package ua
 import (
 	"testing"
 
-	"github.com/puge/logkit/transforms"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/transforms"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/ua-parser/uap-go/uaparser"

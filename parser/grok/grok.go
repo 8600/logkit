@@ -16,9 +16,9 @@ import (
 	"github.com/qiniu/log"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	"github.com/puge/logkit/times"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	"github.com/PUGE/logkit/times"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 const (

@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/puge/logkit/metric"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/metric"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/json-iterator/go"
 )

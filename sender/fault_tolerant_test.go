@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/utils/models"
 	"github.com/qiniu/pandora-go-sdk/base/reqerr"
 )
 

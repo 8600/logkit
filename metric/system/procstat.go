@@ -12,10 +12,10 @@ import (
 	"time"
 
 	"github.com/qiniu/log"
-	"github.com/puge/logkit/metric"
-	. "github.com/puge/logkit/metric/system/utils"
-	"github.com/puge/logkit/utils/models"
-	utilsos "github.com/puge/logkit/utils/os"
+	"github.com/PUGE/logkit/metric"
+	. "github.com/PUGE/logkit/metric/system/utils"
+	"github.com/PUGE/logkit/utils/models"
+	utilsos "github.com/PUGE/logkit/utils/os"
 
 	"github.com/shirou/gopsutil/process"
 )

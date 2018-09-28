@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/metric/curl"
-	"github.com/puge/logkit/metric/system"
-	"github.com/puge/logkit/sender"
+	"github.com/PUGE/logkit/metric/curl"
+	"github.com/PUGE/logkit/metric/system"
+	"github.com/PUGE/logkit/sender"
 
 	"github.com/json-iterator/go"
 	"github.com/labstack/echo"

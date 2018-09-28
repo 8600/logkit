@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	. "github.com/puge/logkit/utils/models"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/json-iterator/go"
 	"github.com/stretchr/testify/assert"

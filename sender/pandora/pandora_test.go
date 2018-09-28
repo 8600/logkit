@@ -19,10 +19,10 @@ import (
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/sender"
-	mockPandora "github.com/puge/logkit/sender/mock_pandora"
-	"github.com/puge/logkit/times"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/sender"
+	mockPandora "github.com/PUGE/logkit/sender/mock_pandora"
+	"github.com/PUGE/logkit/times"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func TestPandoraSender(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"strconv"
 
-	"github.com/puge/logkit/metric"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/metric"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 // https://www.kernel.org/doc/Documentation/sysctl/fs.txt

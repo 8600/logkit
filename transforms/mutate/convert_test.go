@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/puge/logkit/transforms"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/transforms"
+	. "github.com/PUGE/logkit/utils/models"
 
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 	"github.com/stretchr/testify/assert"

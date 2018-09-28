@@ -14,11 +14,11 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/PUGE/logkit/conf"
-	"github.com/puge/logkit/parser"
-	"github.com/puge/logkit/reader"
-	"github.com/puge/logkit/reader/http"
-	"github.com/puge/logkit/sender"
-	. "github.com/puge/logkit/utils/models"
+	"github.com/PUGE/logkit/parser"
+	"github.com/PUGE/logkit/reader"
+	"github.com/PUGE/logkit/reader/http"
+	"github.com/PUGE/logkit/sender"
+	. "github.com/PUGE/logkit/utils/models"
 )
 
 func Test_RawData(t *testing.T) {
