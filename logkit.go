@@ -11,7 +11,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo" // 高性能，极简主义的Go Web框架
 	"github.com/qiniu/log"
 
 	"github.com/PUGE/logkit/cli"

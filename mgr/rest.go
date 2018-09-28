@@ -14,7 +14,6 @@ import (
 	"time"
 
 	"github.com/labstack/echo"
-
 	"github.com/qiniu/log"
 
 	"github.com/PUGE/logkit/parser"
@@ -22,13 +21,21 @@ import (
 	utilsos "github.com/PUGE/logkit/utils/os"
 )
 
-var DEFAULT_PORT = 3000
+// DefaultPort 服务默认监听端口
+var DefaultPort = 3000
 
 const (
-	StatsShell = "stats"
-	PREFIX     = "/logkit"
+	// StatsShell : Shell文件名
+	StatsShell string = "stats"
+	// PREFIX 接口前缀
+	PREFIX = "/logkit"
 )
 
+/*
+RestService : 服务实例结构体
+* @mgr  : 系统配置
+* @l    : Listener
+*/
 type RestService struct {
 	mgr     *Manager
 	l       net.Listener
@@ -36,6 +43,12 @@ type RestService struct {
 	address string
 }
 
+/*
+NewRestService : 返回服务的实例
+* @parameter mgr : 系统配置
+* @parameter router : Web框架实例
+* @return
+*/
 func NewRestService(mgr *Manager, router *echo.Echo) *RestService {
 	if mgr.Cluster.Enable {
 		if !mgr.Cluster.IsMaster && len(mgr.Cluster.MasterUrl) < 1 {
@@ -133,7 +146,7 @@ func NewRestService(mgr *Manager, router *echo.Echo) *RestService {
 	router.POST(PREFIX+"/cluster/configs/:name/reset", rs.PostClusterConfigReset())
 
 	var (
-		port       = DEFAULT_PORT
+		port       = DefaultPort
 		address    string
 		listener   net.Listener
 		err        error
@@ -143,6 +156,7 @@ func NewRestService(mgr *Manager, router *echo.Echo) *RestService {
 		log.Warn("logkit web service was disabled")
 		return rs
 	}
+	// 监听端口 启动Web服务
 	for {
 		if port > 10000 {
 			log.Fatal("bind port failed too many times, exit...")
@@ -150,10 +164,11 @@ func NewRestService(mgr *Manager, router *echo.Echo) *RestService {
 		if mgr.DisableWeb {
 			break
 		}
-
-		address = ":" + strconv.Itoa(port)
+		// 如果配置中设置了端口则使用设置中的端口 否则使用默认端口
 		if mgr.BindHost != "" {
 			address, httpschema = RemoveHttpProtocal(mgr.BindHost)
+		} else {
+			address = ":" + strconv.Itoa(port)
 		}
 		listener, err = httpserve(address, router)
 		if err != nil {
@@ -188,6 +203,7 @@ func NewRestService(mgr *Manager, router *echo.Echo) *RestService {
 	return rs
 }
 
+// GetMySlaveUrl : 返回服务器监听url
 func GetMySlaveUrl(address, schema string) (uri string, err error) {
 	host, port, err := net.SplitHostPort(address)
 	if err != nil {
@@ -202,6 +218,12 @@ func GetMySlaveUrl(address, schema string) (uri string, err error) {
 	return schema + host + ":" + port, nil
 }
 
+/*
+generateStatsShell : 创建Shell文件
+* @parameter address : 服务监听端口
+* @parameter prefix  : 服务器监听前缀
+* @return
+*/
 func generateStatsShell(address, prefix string) (err error) {
 	if strings.HasPrefix(address, ":") {
 		address = fmt.Sprintf("127.0.0.1%v", address)
@@ -212,6 +234,7 @@ func generateStatsShell(address, prefix string) (err error) {
 		err = fmt.Errorf("writefile error %v, address: 127.0.0.1%v%v/status", err, address, prefix)
 		return
 	}
+	// 改变文件属性
 	err = os.Chmod(StatsShell, DefaultDirPerm)
 	if err != nil {
 		err = fmt.Errorf("change mode for %v error %v", StatsShell, err)
@@ -491,6 +514,12 @@ func (ln tcpKeepAliveListener) Accept() (c net.Conn, err error) {
 	return tc, nil
 }
 
+/*
+httpserve : 返回监听器
+* @parameter addr : 监听协议类型
+* @parameter mux :
+* @return
+*/
 func httpserve(addr string, mux http.Handler) (listener net.Listener, err error) {
 	if addr == "" {
 		addr = ":http"
