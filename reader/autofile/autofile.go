@@ -10,7 +10,7 @@ import (
 
 	"github.com/qiniu/log"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/reader"
 	"github.com/puge/logkit/reader/tailx"
 )

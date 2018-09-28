@@ -11,7 +11,7 @@ import (
 	"github.com/jeromer/syslogparser/rfc3164"
 	"github.com/jeromer/syslogparser/rfc5424"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/parser"
 	. "github.com/puge/logkit/utils/models"
 )

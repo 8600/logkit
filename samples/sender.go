@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/qiniu/log"
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/sender"
 	. "github.com/puge/logkit/utils/models"
 )

@@ -3,7 +3,7 @@ package mgr
 import (
 	"net/http"
 
-	conf2 "github.com/puge/logkit/conf"
+	conf2 "github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/parser"
 	. "github.com/puge/logkit/utils/models"
 

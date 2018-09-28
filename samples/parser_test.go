@@ -3,7 +3,7 @@ package samples
 import (
 	"testing"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 
 	"github.com/stretchr/testify/assert"
 )

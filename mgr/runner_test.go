@@ -19,7 +19,7 @@ import (
 	"github.com/qiniu/log"
 
 	"github.com/puge/logkit/cleaner"
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/parser"
 	"github.com/puge/logkit/parser/qiniu"
 	"github.com/puge/logkit/reader"

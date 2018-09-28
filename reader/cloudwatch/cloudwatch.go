@@ -19,7 +19,7 @@ import (
 	"github.com/qiniu/pandora-go-sdk/base/ratelimit"
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/reader"
 	. "github.com/puge/logkit/utils/models"
 )

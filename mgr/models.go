@@ -3,7 +3,7 @@ package mgr
 import (
 	"time"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/router"
 	"github.com/puge/logkit/utils/equeue"
 	. "github.com/puge/logkit/utils/models"

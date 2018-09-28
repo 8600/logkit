@@ -13,7 +13,7 @@ import (
 	"github.com/json-iterator/go"
 	"github.com/qiniu/log"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/metric"
 	"github.com/puge/logkit/metric/curl"
 	"github.com/puge/logkit/reader"

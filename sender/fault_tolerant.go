@@ -16,7 +16,7 @@ import (
 	"github.com/qiniu/log"
 	"github.com/qiniu/pandora-go-sdk/base/reqerr"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/queue"
 	. "github.com/puge/logkit/utils/models"
 	"github.com/puge/logkit/utils/reqid"

@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/puge/logkit/cleaner"
-	config "github.com/puge/logkit/conf"
+	config "github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/parser"
 	"github.com/puge/logkit/reader"
 	"github.com/puge/logkit/sender"

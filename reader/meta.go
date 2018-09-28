@@ -16,7 +16,7 @@ import (
 
 	"github.com/qiniu/log"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/utils"
 	. "github.com/puge/logkit/utils/models"
 	utilsos "github.com/puge/logkit/utils/os"

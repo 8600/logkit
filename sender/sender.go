@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	. "github.com/puge/logkit/utils/models"
 )
 

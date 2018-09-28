@@ -14,7 +14,7 @@ import (
 	"github.com/qiniu/pandora-go-sdk/base/reqerr"
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/sender"
 	"github.com/puge/logkit/sender/mock"
 	"github.com/puge/logkit/sender/mock_pandora"

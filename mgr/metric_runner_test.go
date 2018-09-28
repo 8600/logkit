@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/metric/curl"
 	"github.com/puge/logkit/metric/system"
 	"github.com/puge/logkit/sender"

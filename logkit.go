@@ -15,7 +15,7 @@ import (
 	"github.com/qiniu/log"
 
 	"github.com/puge/logkit/cli"
-	config "github.com/puge/logkit/conf"
+	config "github.com/PUGE/logkit/conf"
 	_ "github.com/puge/logkit/metric/all"
 	"github.com/puge/logkit/mgr"
 	"github.com/puge/logkit/times"

@@ -21,7 +21,7 @@ import (
 	"github.com/qiniu/pandora-go-sdk/logdb"
 	"github.com/qiniu/pandora-go-sdk/pipeline"
 
-	logkitconf "github.com/puge/logkit/conf"
+	logkitconf "github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/metric"
 	"github.com/puge/logkit/sender"
 	"github.com/puge/logkit/times"

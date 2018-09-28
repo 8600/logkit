@@ -22,7 +22,7 @@ import (
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/parser"
 	"github.com/puge/logkit/reader"
 	"github.com/puge/logkit/router"

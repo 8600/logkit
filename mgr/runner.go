@@ -17,7 +17,7 @@ import (
 	"github.com/qiniu/pandora-go-sdk/base/reqerr"
 
 	"github.com/puge/logkit/cleaner"
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/parser"
 	_ "github.com/puge/logkit/parser/builtin"
 	"github.com/puge/logkit/parser/qiniu"

@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime"
 
-	config "github.com/puge/logkit/conf"
+	config "github.com/PUGE/logkit/conf"
 	_ "github.com/puge/logkit/metric/all"
 	"github.com/puge/logkit/mgr"
 	"github.com/puge/logkit/parser"

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/puge/logkit/reader"

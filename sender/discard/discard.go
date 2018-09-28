@@ -1,7 +1,7 @@
 package discard
 
 import (
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/sender"
 	. "github.com/puge/logkit/utils/models"
 )

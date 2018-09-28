@@ -13,7 +13,7 @@ import (
 	"github.com/json-iterator/go"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/puge/logkit/conf"
+	"github.com/PUGE/logkit/conf"
 	"github.com/puge/logkit/reader"
 	"github.com/puge/logkit/reader/http"
 	"github.com/puge/logkit/sender"
