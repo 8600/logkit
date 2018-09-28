@@ -71,6 +71,7 @@ type Manager struct {
 	SystemInfo string
 }
 
+// NewManager : 注册各种采集器
 func NewManager(conf ManagerConfig) (*Manager, error) {
 	rr := reader.NewRegistry()
 	pr := parser.NewRegistry()
@@ -78,6 +79,7 @@ func NewManager(conf ManagerConfig) (*Manager, error) {
 	return NewCustomManager(conf, rr, pr, sr)
 }
 
+// NewCustomManager : 返回Manager
 func NewCustomManager(conf ManagerConfig, rr *reader.Registry, pr *parser.Registry, sr *sender.Registry) (*Manager, error) {
 	if conf.RestDir == "" {
 		dir, err := os.Getwd()

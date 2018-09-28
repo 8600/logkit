@@ -66,6 +66,7 @@ func NewRestService(mgr *Manager, router *echo.Echo) *RestService {
 		cluster: NewCluster(&mgr.Cluster),
 	}
 	rs.cluster.mutex = new(sync.RWMutex)
+	// 获取服务器状态
 	router.GET(PREFIX+"/status", rs.Status())
 
 	// 获取历史 errors API
@@ -251,6 +252,7 @@ func RespError(c echo.Context, respCode int, errCode, errMsg string) error {
 	return c.JSON(respCode, errInfo)
 }
 
+// RespSuccess : 返回成功信息
 func RespSuccess(c echo.Context, data interface{}) error {
 	respData := map[string]interface{}{
 		"code": ErrNothing,
@@ -261,7 +263,7 @@ func RespSuccess(c echo.Context, data interface{}) error {
 	return c.JSON(http.StatusOK, respData)
 }
 
-// get /logkit/status
+// Status : 返回服务器状态
 func (rs *RestService) Status() echo.HandlerFunc {
 	return func(c echo.Context) error {
 		rss := rs.mgr.Status()
@@ -276,6 +278,7 @@ func (rs *RestService) Status() echo.HandlerFunc {
 	}
 }
 
+// GetErrors : 返回服务器错误信息
 // get /logkit/errors
 func (rs *RestService) GetErrors() echo.HandlerFunc {
 	return func(c echo.Context) error {
@@ -283,6 +286,7 @@ func (rs *RestService) GetErrors() echo.HandlerFunc {
 	}
 }
 
+// GetError : 获取指定runner的错误信息
 // get /logkit/errors/<name>
 func (rs *RestService) GetError() echo.HandlerFunc {
 	return func(c echo.Context) error {

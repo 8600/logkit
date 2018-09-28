@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"net/http"
 	_ "net/http/pprof"
 	"os"
 	"path/filepath"
@@ -26,9 +25,9 @@ import (
 
 //Config of logkit
 type Config struct {
-	MaxProcs         int      `json:"max_procs"`
-	DebugLevel       int      `json:"debug_level"`
-	ProfileHost      string   `json:"profile_host"`
+	MaxProcs   int `json:"max_procs"`
+	DebugLevel int `json:"debug_level"`
+	// ProfileHost      string   `json:"profile_host"`
 	ConfsPath        []string `json:"confs_path"`
 	LogPath          string   `json:"log"`
 	CleanSelfLog     bool     `json:"clean_self_log"`
@@ -286,12 +285,13 @@ func main() {
 
 	// start rest service
 	rs := mgr.NewRestService(m, e)
-	if conf.ProfileHost != "" {
-		log.Infof("go profile_host was open at %v", conf.ProfileHost)
-		go func() {
-			log.Fatal(http.ListenAndServe(conf.ProfileHost, nil))
-		}()
-	}
+	// 不知道有什么用
+	// if conf.ProfileHost != "" {
+	// 	log.Infof("go profile_host was open at %v", conf.ProfileHost)
+	// 	go func() {
+	// 		log.Fatal(http.ListenAndServe(conf.ProfileHost, nil))
+	// 	}()
+	// }
 	if err = rs.Register(); err != nil {
 		log.Fatalf("register master error %v", err)
 	}
