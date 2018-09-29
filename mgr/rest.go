@@ -521,7 +521,7 @@ func (ln tcpKeepAliveListener) Accept() (c net.Conn, err error) {
 /*
 httpserve : 返回监听器
 * @parameter addr : 监听协议类型
-* @parameter mux :
+* @parameter mux : 处理器
 * @return
 */
 func httpserve(addr string, mux http.Handler) (listener net.Listener, err error) {

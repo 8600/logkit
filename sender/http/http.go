@@ -53,6 +53,7 @@ func NewSender(c conf.MapConf) (sender.Sender, error) {
 	protocol, _ := c.GetStringOr(sender.KeyHttpSenderProtocol, sender.SendProtocolJson)
 	runnerName, _ := c.GetStringOr(KeyRunnerName, sender.UnderfinedRunnerName)
 	timeout, _ := c.GetStringOr(sender.KeyHttpTimeout, "30s")
+	// 判断时间格式是否正确
 	dur, err := time.ParseDuration(timeout)
 	if err != nil {
 		return nil, errors.New("timeout configure " + timeout + " is invalid")

@@ -9,11 +9,11 @@ import (
 
 // ModeUsages 用途说明
 var ModeUsages = KeyValueSlice{
+	{TypeDiscard, "收集数据但不发送", ""},
 	{TypePandora, "七牛云智能日志平台(Pandora)", ""},
 	{TypeFile, "本地文件", ""},
 	{TypeMongodbAccumulate, "MongoDB 服务", ""},
 	{TypeInfluxdb, "InfluxDB 服务", ""},
-	{TypeDiscard, "消费数据但不发送", ""},
 	{TypeElastic, "Elasticsearch 服务", ""},
 	{TypeKafka, "Kafka 服务", ""},
 	{TypeHttp, "HTTP 服务器", ""},
@@ -161,6 +161,7 @@ var (
 )
 
 var ModeKeyOptions = map[string][]Option{
+	TypeDiscard: {},
 	TypeFile: {
 		{
 			KeyName:      KeyFileSenderPath,
@@ -789,7 +790,6 @@ var ModeKeyOptions = map[string][]Option{
 		OptionMaxDiskUsedBytes,
 		OptionMaxSizePerSize,
 	},
-	TypeDiscard: {},
 	TypeElastic: {
 		{
 			KeyName:      KeyElasticHost,
