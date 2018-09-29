@@ -105,11 +105,12 @@ func (_ *CPUStats) Config() map[string]interface{} {
 	cpuConfig := make([]Option, 0)
 	for _, val := range ConfigCpuUsages {
 		opt := Option{
-			KeyName:       val.Key,
+			KeyName: val.Key,
+			// 这里准备改成select
 			Element:       Radio,
 			ChooseOnly:    true,
-			ChooseOptions: []interface{}{"true", "false"},
-			Default:       "true",
+			ChooseOptions: []interface{}{true, false},
+			Default:       true,
 			DefaultNoUse:  false,
 			Description:   val.Value,
 			Type:          metric.ConfigTypeBool,

@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/qiniu/log"
 	"github.com/PUGE/logkit/metric"
 	. "github.com/PUGE/logkit/metric/system/utils"
 	"github.com/PUGE/logkit/utils/models"
 	utilsos "github.com/PUGE/logkit/utils/os"
+	"github.com/qiniu/log"
 
 	"github.com/shirou/gopsutil/process"
 )
@@ -140,8 +140,8 @@ var ConfigProcUsages = []models.Option{
 		KeyName:       "cpu_usage_related",
 		Element:       models.Radio,
 		ChooseOnly:    true,
-		ChooseOptions: []interface{}{"true", "false"},
-		Default:       "true",
+		ChooseOptions: []interface{}{true, false},
+		Default:       true,
 		Description:   "收集Cpu用量相关的信息(cpu_usage_related)",
 		Type:          metric.ConfigTypeBool,
 	},
@@ -149,8 +149,8 @@ var ConfigProcUsages = []models.Option{
 		KeyName:       "mem_related",
 		Element:       models.Radio,
 		ChooseOnly:    true,
-		ChooseOptions: []interface{}{"true", "false"},
-		Default:       "true",
+		ChooseOptions: []interface{}{true, false},
+		Default:       true,
 		Description:   "收集内存相关的信息(mem_related)",
 		Type:          metric.ConfigTypeBool,
 	},
@@ -167,8 +167,8 @@ var ConfigProcUsages = []models.Option{
 		KeyName:       "io_related",
 		Element:       models.Radio,
 		ChooseOnly:    true,
-		ChooseOptions: []interface{}{"true", "false"},
-		Default:       "true",
+		ChooseOptions: []interface{}{true, false},
+		Default:       true,
 		Description:   "收集IO相关的信息(io_related)",
 		Type:          metric.ConfigTypeBool,
 	},
