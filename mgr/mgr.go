@@ -11,18 +11,18 @@ import (
 	"sync"
 	"time"
 
+	"github.com/howeyc/fsnotify"
+	"github.com/json-iterator/go"
+	"github.com/qiniu/log"
+
 	"github.com/PUGE/logkit/cleaner"
 	config "github.com/PUGE/logkit/conf"
 	"github.com/PUGE/logkit/parser"
 	"github.com/PUGE/logkit/reader"
 	"github.com/PUGE/logkit/sender"
+	"github.com/PUGE/logkit/utils"
 	. "github.com/PUGE/logkit/utils/models"
 	utilsos "github.com/PUGE/logkit/utils/os"
-
-	"github.com/qiniu/log"
-
-	"github.com/howeyc/fsnotify"
-	"github.com/json-iterator/go"
 )
 
 var DIR_NOT_EXIST_SLEEP_TIME = "300" //300 s
@@ -71,7 +71,6 @@ type Manager struct {
 	SystemInfo string
 }
 
-// NewManager : 注册各种采集器
 func NewManager(conf ManagerConfig) (*Manager, error) {
 	rr := reader.NewRegistry()
 	pr := parser.NewRegistry()
@@ -79,7 +78,6 @@ func NewManager(conf ManagerConfig) (*Manager, error) {
 	return NewCustomManager(conf, rr, pr, sr)
 }
 
-// NewCustomManager : 返回Manager
 func NewCustomManager(conf ManagerConfig, rr *reader.Registry, pr *parser.Registry, sr *sender.Registry) (*Manager, error) {
 	if conf.RestDir == "" {
 		dir, err := os.Getwd()
@@ -617,7 +615,7 @@ func (m *Manager) Configs() (rss map[string]RunnerConfig) {
 		}
 		tmpRss[k] = v
 	}
-	deepCopyByJSON(&rss, &tmpRss)
+	utils.DeepCopyByJSON(&rss, &tmpRss)
 	m.runnerLock.RUnlock()
 	return
 }
@@ -629,7 +627,7 @@ func (m *Manager) getDeepCopyConfig(name string) (filename string, conf RunnerCo
 	if tmpConf, ok := m.runnerConfigs[filename]; !ok {
 		err = fmt.Errorf("runner %v is not found", filename)
 	} else {
-		deepCopyByJSON(&conf, &tmpConf)
+		utils.DeepCopyByJSON(&conf, &tmpConf)
 	}
 	return
 }

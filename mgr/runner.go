@@ -29,6 +29,7 @@ import (
 	_ "github.com/PUGE/logkit/sender/builtin"
 	"github.com/PUGE/logkit/transforms"
 	"github.com/PUGE/logkit/transforms/ip"
+	"github.com/PUGE/logkit/utils"
 	"github.com/PUGE/logkit/utils/equeue"
 	. "github.com/PUGE/logkit/utils/models"
 )
@@ -748,7 +749,7 @@ func classifySenderData(senders []sender.Sender, datas []Data, router *router.Ro
 		} else {
 			// 数据进行深度拷贝，防止数据污染
 			var copiedDatas []Data
-			deepCopyByJSON(&copiedDatas, &datas)
+			utils.DeepCopyByJSON(&copiedDatas, &datas)
 			senderDataList[i] = copiedDatas
 		}
 	}
@@ -807,7 +808,7 @@ func addTagsToData(tags map[string]interface{}, datas []Data, runnername string)
 // 先停Reader，不再读取，然后停Run函数，让读取的都转到发送，最后停Sender结束整个过程。
 // Parser 无状态，无需stop。
 func (r *LogExportRunner) Stop() {
-	log.Infof("Runner[%v] wait for reader %v stopped", r.Name(), r.reader.Name())
+	log.Infof("Runner[%v] wait for reader %v to stop", r.Name(), r.reader.Name())
 	err := r.reader.Close()
 	if err != nil {
 		log.Errorf("Runner[%v] cannot close reader name: %s, err: %v", r.Name(), r.reader.Name(), err)
@@ -840,7 +841,7 @@ func (r *LogExportRunner) Stop() {
 		}
 	}
 
-	log.Infof("Runner[%v] wait for sender %v stopped", r.Name(), r.reader.Name())
+	log.Infof("Runner[%v] wait for sender %v to stop", r.Name(), r.reader.Name())
 	for _, s := range r.senders {
 		err := s.Close()
 		if err != nil {
@@ -853,6 +854,7 @@ func (r *LogExportRunner) Stop() {
 	if r.cleaner != nil {
 		r.cleaner.Close()
 	}
+	log.Infof("Runner[%v] stopped successfully", r.Name())
 }
 
 func (r *LogExportRunner) Name() string {
@@ -1047,20 +1049,6 @@ func calcSpeedTrend(old, new StatsInfo, elaspedtime float64) (speed float64, tre
 	}
 	trend = getTrend(old.Speed, speed)
 	return
-}
-
-func deepCopyByJSON(dst, src interface{}) {
-	confBytes, err := jsoniter.Marshal(src)
-	if err != nil {
-		log.Errorf("deepCopyByJSON marshal error %v, use same pointer", err)
-		dst = src
-		return
-	}
-	if err = jsoniter.Unmarshal(confBytes, dst); err != nil {
-		log.Errorf("deepCopyByJSON unmarshal error %v, use same pointer", err)
-		dst = src
-		return
-	}
 }
 
 //Compatible 用于新老配置的兼容

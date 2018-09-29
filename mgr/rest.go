@@ -13,12 +13,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/labstack/echo"
-	"github.com/qiniu/log"
-
 	"github.com/PUGE/logkit/parser"
+	"github.com/PUGE/logkit/utils"
 	. "github.com/PUGE/logkit/utils/models"
 	utilsos "github.com/PUGE/logkit/utils/os"
+	"github.com/labstack/echo"
+	"github.com/qiniu/log"
 )
 
 // DefaultPort 服务默认监听端口
@@ -361,7 +361,7 @@ func (rs *RestService) checkNameAndConfig(c echo.Context) (name string, conf Run
 		err = errors.New("config " + name + " is not found")
 		return
 	}
-	deepCopyByJSON(&conf, &tmpConf)
+	utils.DeepCopyByJSON(&conf, &tmpConf)
 	return
 }
 
