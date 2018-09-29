@@ -22,13 +22,12 @@ func GetMetricUsages() []Option {
 	metricOptions := make([]Option, 0)
 	for key, collector := range Collectors {
 		option := Option{
-			KeyName:       key,
-			Element:       Radio,
-			ChooseOnly:    true,
-			ChooseOptions: []interface{}{"true", "false"},
-			Default:       "true",
-			DefaultNoUse:  false,
-			Description:   collector().Usages(),
+			KeyName:      key,
+			Element:      Radio,
+			ChooseOnly:   true,
+			Default:      true,
+			DefaultNoUse: false,
+			Description:  collector().Usages(),
 		}
 		metricOptions = append(metricOptions, option)
 	}
