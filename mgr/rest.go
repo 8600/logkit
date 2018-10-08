@@ -321,10 +321,12 @@ func (rs *RestService) GetRunners() echo.HandlerFunc {
 func (rs *RestService) GetConfigs() echo.HandlerFunc {
 	return func(c echo.Context) error {
 		rss := rs.mgr.Configs()
-		for k, v := range rss {
-			rss[k] = TrimSecretInfo(v, false)
+		var newRss map[string]interface{}
+		newRss = make(map[string]interface{})
+		for _, v := range rss {
+			newRss[v.RunnerInfo.RunnerName] = TrimSecretInfo(v, false)
 		}
-		return RespSuccess(c, rss)
+		return RespSuccess(c, newRss)
 	}
 }
 
