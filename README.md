@@ -1,3 +1,5 @@
+测试: go generate; CGO_ENABLED=1 go test -race ./...
+
 # logkit-community（社区版） [![Build Status](https://api.travis-ci.org/qiniu/logkit.svg)](http://travis-ci.org/qiniu/logkit)
 
 ![logkit LOGO](https://raw.githubusercontent.com/qiniu/logkit/master/resources/logo.png)

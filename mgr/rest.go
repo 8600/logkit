@@ -50,6 +50,7 @@ NewRestService : 返回服务的实例
 * @return
 */
 func NewRestService(mgr *Manager, router *echo.Echo) *RestService {
+	// 判断是否开启集群模式
 	if mgr.Cluster.Enable {
 		if !mgr.Cluster.IsMaster && len(mgr.Cluster.MasterUrl) < 1 {
 			log.Fatalf("cluster is enabled but master url is empty")
@@ -193,6 +194,7 @@ func NewRestService(mgr *Manager, router *echo.Echo) *RestService {
 		}
 	}
 	rs.address = address
+	// 判断是否开启集群
 	if rs.cluster.Enable {
 		if rs.cluster.Address == "" {
 			rs.cluster.Address, err = GetMySlaveUrl(address, httpschema)
@@ -480,6 +482,7 @@ type Version struct {
 	Version string `json:"version"`
 }
 
+// 获取版本信息
 func (rs *RestService) GetVersion() echo.HandlerFunc {
 	return func(c echo.Context) error {
 		return RespSuccess(c, &Version{Version: rs.mgr.Version})
